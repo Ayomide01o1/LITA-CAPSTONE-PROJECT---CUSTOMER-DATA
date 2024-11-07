@@ -20,9 +20,26 @@ This repository contains data and analysis for evaluating the sales performance 
 
 
 ## DAX Formulas:
+1. SELECT TOP 3 
+  Region,
+  COUNT(CustomerID) AS                CancellationCount
+  FROM 
+  TABLE_NAME
+  WHERE 
+  Canceled = 1
+  GROUP BY 
+  Region
+  ORDER BY 
+  CancellationCount DESC;
+
+
 
 ## Tools Used:
 
  -Power BI
+ 1. Visualization 
  -Microsoft Excel
+1. Analysis
+2. Visualization 
  -SQL server
+1. SQL query writing and analysis 

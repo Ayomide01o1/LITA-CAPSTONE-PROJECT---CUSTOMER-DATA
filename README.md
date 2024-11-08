@@ -19,10 +19,11 @@ This repository contains data and analysis for evaluating the sales performance 
 5. Average subscription duration
 
 
-## DAX Formulas:
+## DAX FUNCTIONS/QUERIES:
 1. SELECT TOP 3 
   Region,
-  COUNT(CustomerID) AS                CancellationCount
+  COUNT(CustomerID) AS
+   CancellationCount
   FROM 
   TABLE_NAME
   WHERE 
@@ -31,15 +32,28 @@ This repository contains data and analysis for evaluating the sales performance 
   Region
   ORDER BY 
   CancellationCount DESC;
-
+2. SELECT TOP 1
+SubscriptionType,
+COUNT(CustomerID) AS Totalcustomers
+FROM
+[dbo].[Customer]
+WHERE 
+Canceled=0
+GROUP BY
+SubscriptionType
+ORDER BY 
+Totalcustomers DESC;
 
 
 ## Tools Used:
-
  -Power BI
- 1. Visualization 
+ 1. Visualization
+ (https://github.com/user-attachments/assets/2cb2da77-4dc2-4a17-8763-77932e39e880)
+
  -Microsoft Excel
 1. Analysis
-2. Visualization 
+2. Visualization
+(https://github.com/user-attachments/assets/3978bfd8-d610-43f7-bd35-9b36aaaac023)
+
  -SQL server
 1. SQL query writing and analysis 
